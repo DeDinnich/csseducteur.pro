@@ -1,0 +1,23 @@
+# Utiliser une image Node.js
+FROM node:18
+
+# Définir le dossier de travail
+WORKDIR /var/www/html
+
+# Copier uniquement package.json et package-lock.json pour installer les dépendances
+COPY package.json package-lock.json ./
+
+# Installer les dépendances globales et locales
+RUN npm install -g nodemon && npm install
+
+# Copier tout le projet (sources et configuration)
+COPY . .
+
+# Installer les dépendances manquantes (Rollup par exemple)
+RUN npm install rollup --save-dev
+
+# Exposer le port par défaut de Vite
+EXPOSE 5173
+
+# Exécuter le serveur de développement avec host exposé pour les connexions Docker
+CMD ["npm", "run", "dev", "--", "--host"]
