@@ -1,0 +1,41 @@
+FROM php:8.2-apache
+
+# Installer les dépendances système
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libonig-dev \
+    libzip-dev \
+    zip \
+    unzip \
+    git \
+    curl \
+    nodejs \
+    npm \
+    && docker-php-ext-configure gd \
+    && docker-php-ext-install pdo_mysql mbstring zip gd
+
+# Configurer Apache
+COPY server/laravel.conf /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite
+
+# Installer Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Définir le dossier de travail
+WORKDIR /var/www/html
+
+# Copier tout le projet dans le conteneur
+COPY . .
+
+# Donner les permissions nécessaires
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Installer les dépendances PHP
+RUN composer install --no-dev --optimize-autoloader
+
+# Exposer le port 80
+EXPOSE 80
+
+CMD ["apache2-foreground"]

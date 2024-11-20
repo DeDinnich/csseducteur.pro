@@ -1,0 +1,37 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: server/Dockerfile-laravel
+    container_name: laravel_app
+    ports:
+      - "8000:80"
+    volumes:
+      - ../:/var/www/html
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: csseducteur_db
+      DB_USERNAME: csseducteur
+      DB_PASSWORD: uV0AKI2F6l2jtmY3CbFtFCauuV9ZQDdGv4dxy0sJGTIc5prRM3
+
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile-mysql
+    container_name: mysql_db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: v5OY60YhPci4hjovWZKd9xtJHEb1c0QBA7AxluZCstLkGw0TKx
+      MYSQL_DATABASE: csseducteur_db
+      MYSQL_USER: csseducteur
+      MYSQL_PASSWORD: uV0AKI2F6l2jtmY3CbFtFCauuV9ZQDdGv4dxy0sJGTIc5prRM3
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./my.cnf:/etc/mysql/my.cnf
+
+volumes:
+  dbdata:

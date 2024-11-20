@@ -1,0 +1,7 @@
+FROM mysql:8.0
+
+# Copier la configuration personnalisée
+COPY my.cnf /etc/mysql/conf.d/my.cnf
+
+# Exposer le port 3306
+EXPOSE 3306
