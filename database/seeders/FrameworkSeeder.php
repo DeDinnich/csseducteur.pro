@@ -4,19 +4,15 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Framework;
 
-class DatabaseSeeder extends Seeder
+class FrameworkSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run()
     {
-        $this->call([
-            UserSeeder::class,
-            FrameworkSeeder::class,
-            QuestionSeeder::class,
-            ResponseSeeder::class,
-        ]);
+        Framework::factory(20)->create(); // Génération de 20 frameworks
     }
 }

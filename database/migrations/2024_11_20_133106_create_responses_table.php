@@ -9,13 +9,12 @@ class CreateResponsesTable extends Migration
     public function up()
     {
         Schema::create('responses', function (Blueprint $table) {
-            $table->uuid('uuid')->primary();
-            $table->uuid('question_id');
-            $table->text('content');
-            $table->boolean('is_correct')->default(false);
+            $table->id();
+            $table->uuid('uuid')->unique();
+            $table->foreignId('question_id')->constrained()->onDelete('cascade'); // Clé étrangère vers questions
+            $table->string('texte'); // Ajoutez cette ligne si elle manque
+            $table->boolean('correct')->default(false); // Indique si la réponse est correcte
             $table->timestamps();
-
-            $table->foreign('question_id')->references('uuid')->on('questions')->onDelete('cascade');
         });
     }
 

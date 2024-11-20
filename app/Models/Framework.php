@@ -10,16 +10,22 @@ class Framework extends Model
 {
     use HasFactory;
 
-    public $incrementing = false;
-    protected $keyType = 'uuid';
+    protected $fillable = [
+        'uuid',
+        'nom',
+        'type',
+        'popularite',
+        'difficulte',
+        'langage_associe',
+        'open_source',
+    ];
 
     protected static function boot()
     {
         parent::boot();
+
         static::creating(function ($model) {
-            if (!$model->uuid) {
-                $model->uuid = (string) Str::uuid();
-            }
+            $model->uuid = Str::uuid();
         });
     }
 }

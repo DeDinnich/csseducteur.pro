@@ -10,16 +10,24 @@ class Response extends Model
 {
     use HasFactory;
 
-    public $incrementing = false;
-    protected $keyType = 'uuid';
+    protected $fillable = [
+        'uuid',
+        'question_id',
+        'texte',
+        'correct',
+    ];
 
     protected static function boot()
     {
         parent::boot();
+
         static::creating(function ($model) {
-            if (!$model->uuid) {
-                $model->uuid = (string) Str::uuid();
-            }
+            $model->uuid = Str::uuid();
         });
+    }
+
+    public function question()
+    {
+        return $this->belongsTo(Question::class);
     }
 }

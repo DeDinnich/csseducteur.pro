@@ -10,16 +10,25 @@ class Question extends Model
 {
     use HasFactory;
 
-    public $incrementing = false;
-    protected $keyType = 'uuid';
+    protected $fillable = [
+        'uuid',
+        'texte',
+        'type',
+        'difficulte',
+        'categorie',
+    ];
 
     protected static function boot()
     {
         parent::boot();
+
         static::creating(function ($model) {
-            if (!$model->uuid) {
-                $model->uuid = (string) Str::uuid();
-            }
+            $model->uuid = Str::uuid();
         });
+    }
+
+    public function responses()
+    {
+        return $this->hasMany(Response::class);
     }
 }
