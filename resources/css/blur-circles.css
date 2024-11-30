@@ -1,0 +1,33 @@
+/* Conteneur des cercles flous */
+.blur-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Empêche l'interaction avec les cercles */
+    overflow: hidden;
+    z-index: -1; /* Les cercles sont en arrière-plan */
+}
+
+/* Cercles flous individuels */
+.blur-circle {
+    position: absolute;
+    width: 250px; /* Taille des cercles */
+    height: 250px;
+    background-color: #F4B0EE; /* Couleur des cercles */
+    filter: blur(50px); /* Flou élevé */
+    opacity: 0.5; /* Légère transparence */
+    border-radius: 50%; /* Cercles parfaits */
+    animation: blinking 3s infinite alternate; /* Animation de clignotement */
+}
+
+/* Animation de clignotement */
+@keyframes blinking {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0.7;
+    }
+}

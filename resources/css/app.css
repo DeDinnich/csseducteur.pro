@@ -1,1 +1,8 @@
 @import './header.css';
+/*@import './footer.css';*/
+@import './home.css';
+@import './blur-circles.css';
+
+body {
+    background-color: #040016;
+}

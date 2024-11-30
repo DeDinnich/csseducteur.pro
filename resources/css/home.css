@@ -1,0 +1,42 @@
+/* Page container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+/* Titre */
+.page-title {
+    color: white; /* Texte blanc */
+    font-size: 48px; /* Taille du texte */
+    margin-bottom: 40px; /* Espacement avec le bouton */
+    text-align: center; /* Centré */
+}
+
+/* Bouton */
+.start-button {
+    width: 30vw;
+    height: 10vh;
+    margin-top: 5vh;
+    display: flex; /* Utilise flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    color: white; /* Texte blanc */
+    font-size: 24px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-decoration: none; /* Supprime le soulignement */
+    opacity: 0.9; /* Opacité à 90% */
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Ombre blanche */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+/* Hover sur le bouton */
+.start-button:hover {
+    opacity: 1; /* Opacité à 100% */
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.8); /* Accentuation de l'ombre */
+    transform: scale(1.05); /* Effet de zoom léger */
+}

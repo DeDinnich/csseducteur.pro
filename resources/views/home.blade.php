@@ -3,6 +3,10 @@
 @section('title', 'Accueil')
 
 @section('content')
-    <h1>Bienvenue sur CSSeducteur</h1>
-    <p>Ceci est la page d'accueil.</p>
+<div class="page-container">
+    <h1 class="page-title">Trouve le CsSéducteur qui partagera la carriere</h1>
+    <div class="button-container">
+        <a href="{{ route('search') }}" class="start-button">Commencer</a>
+    </div>
+</div>
 @endsection
