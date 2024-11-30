@@ -18,10 +18,6 @@ Route::get('/whoiam', function () {
     return view('whoiam');
 })->name('whoiam');
 
-Route::get('/graph', function () {
-    return view('graph');
-})->name('graph');
-
 Route::get('/results', function () {
     return view('results');
 })->name('results');

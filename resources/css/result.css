@@ -1,0 +1,56 @@
+/* Div blanche avec opacité */
+.result-box {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* Centré avec espace en bas */
+    background-color: rgba(255, 255, 255, 0.9); /* Blanc avec opacité */
+    color: #000; /* Texte noir */
+    font-size: 18px;
+    text-align: center;
+    padding: 15px 20px; /* Espace interne */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+/* Contenu des résultats */
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espace entre les éléments */
+    align-items: center;
+}
+
+/* Item de résultat */
+.result-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Images */
+.result-image {
+    width: 40%; /* Largeur de l'image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+}
+
+/* Texte */
+.result-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .result-item {
+        flex-direction: column; /* Passe en colonne sur petit écran */
+    }
+
+    .result-image {
+        width: 100%; /* Images prennent toute la largeur */
+    }
+}

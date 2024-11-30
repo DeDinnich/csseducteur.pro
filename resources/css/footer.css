@@ -1,0 +1,11 @@
+/* Footer */
+.site-footer {
+    position: fixed; /* Fixe le footer en bas de la page */
+    bottom: 0; /* Positionné en bas */
+    width: 100%; /* Prend toute la largeur */
+    color: white; /* Texte blanc */
+    text-align: center; /* Texte centré */
+    padding: 10px 0; /* Espacement vertical */
+    font-size: 14px; /* Taille de la police */
+    z-index: 10; /* S'assure que le footer est au-dessus des autres éléments */
+}

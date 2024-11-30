@@ -1,0 +1,67 @@
+/* Barre de recherche */
+.search-bar-container {
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #739EF0;
+}
+
+/* Conteneur des articles */
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espace entre les articles */
+    align-items: center;
+}
+
+/* Article */
+.article {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Images */
+.article-image {
+    width: 40%; /* Largeur de l'image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+}
+
+/* Texte */
+.article-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article {
+        flex-direction: column; /* Les articles deviennent verticaux */
+    }
+
+    .article.reverse {
+        flex-direction: column; /* Idem pour les articles inversés */
+    }
+
+    .article-image {
+        width: 100%; /* Images prennent toute la largeur */
+    }
+}
