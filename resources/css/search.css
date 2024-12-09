@@ -1,50 +1,49 @@
 /* Info-box */
 .info-box {
-    width: 80%; /* Largeur adaptée à l'écran */
-    max-width: 600px; /* Largeur maximale */
-    background-color: white; /* Fond blanc */
-    color: #000; /* Texte noir */
+    width: 80%; 
+    max-width: 600px; 
+    background-color: white; 
+    color: #000; 
     font-size: 18px;
-    text-align: center; /* Texte centré */
-    padding: 15px 20px; /* Espace interne */
-    border-radius: 8px; /* Coins arrondis */
-    margin-bottom: 30px; /* Espace sous la boîte */
+    text-align: center; 
+    padding: 15px 20px; 
+    border-radius: 8px; 
+    margin-bottom: 30px;
 }
 
 /* Conteneur des réponses */
 .reponse-container {
     display: flex;
-    flex-wrap: wrap; /* Permet de passer en colonne sur petits écrans */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 20px; /* Espacement entre les boutons */
+    gap: 20px;
 }
 
 /* Boutons */
 .rep-button {
     display: inline-block;
-    padding: 15px 30px; /* Taille du bouton */
+    padding: 15px 30px; 
     color: white;
     font-size: 18px;
     font-weight: bold;
-    text-decoration: none; /* Supprime le soulignement */
+    text-decoration: none;
     opacity: 0.9;
     border: 2px solid white;
-    border-radius: 8px; /* Coins arrondis */
+    border-radius: 8px;
     background-color: transparent;
     transition: all 0.3s ease;
-    width: 150px; /* Largeur fixe pour un alignement propre */
+    width: 150px;
     text-align: center;
 }
 
 /* Hover sur les boutons */
 .rep-button:hover {
     opacity: 1;
-    transform: scale(1.05); /* Effet de zoom */
+    transform: scale(1.05);
 }
 
-/* Responsive (petits écrans) */
 @media (max-width: 768px) {
     .reponse-container {
-        flex-direction: column; /* Réponses en colonne */
+        flex-direction: column; 
     }
 }

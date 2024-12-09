@@ -2,21 +2,19 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Framework;
+use App\Models\Question;
+use App\Models\Response;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run()
     {
-        $this->call([
-            UserSeeder::class,
-            FrameworkSeeder::class,
-            QuestionSeeder::class,
-            ResponseSeeder::class,
-        ]);
+        Framework::factory(10)->create();
+
+        Question::factory(10)
+            ->has(Response::factory(4)) // 4 réponses pour chaque question
+            ->create();
     }
 }

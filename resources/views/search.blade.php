@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="page-container">
+    <!-- Titre -->
     <h1 class="page-title">Quel CsSéducteur te correspond le mieux ?</h1>
     
     <!-- Div blanche avec texte centré -->
@@ -11,12 +12,14 @@
         Réponds honnêtement aux questions pour découvrir ton profil !
     </div>
 
+    <!-- Question actuelle -->
+    <h2 class="question-title">{{ $question->texte }}</h2>
+
     <!-- Conteneur des réponses -->
     <div class="reponse-container">
-        <a href="#" class="rep-button">rep 1</a>
-        <a href="#" class="rep-button">rep 2</a>
-        <a href="#" class="rep-button">rep 3</a>
-        <a href="#" class="rep-button">rep 4</a>
+        @foreach($question->responses->shuffle()->take(4) as $response)
+            <a href="{{ route('search') }}" class="rep-button">{{ $response->texte }}</a>
+        @endforeach
     </div>
 </div>
 @endsection

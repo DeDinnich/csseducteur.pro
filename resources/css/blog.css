@@ -35,7 +35,23 @@
     max-width: 800px;
 }
 
-/* Images */
+.article.reverse {
+    flex-direction: row-reverse;
+}
+
+.article-content {
+    width: 60%; /* 60% de la largeur pour le texte */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
 .article-image {
     width: 40%; /* Largeur de l'image */
     height: auto;
@@ -43,7 +59,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile */
 }
 
-/* Texte */
 .article-text {
     font-size: 18px;
     line-height: 1.6;
@@ -63,5 +78,9 @@
 
     .article-image {
         width: 100%; /* Images prennent toute la largeur */
+    }
+
+    .article-content {
+        width: 100%; /* Prend la totalité de la largeur */
     }
 }

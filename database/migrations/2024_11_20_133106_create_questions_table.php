@@ -9,12 +9,8 @@ class CreateQuestionsTable extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->id();
-            $table->uuid('uuid')->unique();
-            $table->string('texte'); // Ajoutez cette ligne si elle manque
-            $table->enum('type', ['choix unique', 'choix multiple']);
-            $table->enum('difficulte', ['facile', 'intermediaire', 'difficile']);
-            $table->enum('categorie', ['frontend', 'backend', 'fullstack']);
+            $table->uuid('id')->primary();
+            $table->string('texte');
             $table->timestamps();
         });
     }

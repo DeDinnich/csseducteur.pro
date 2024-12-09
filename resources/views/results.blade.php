@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Resultats')
+@section('title', 'Résultats')
 
 @section('content')
 <div class="page-container">
@@ -9,7 +9,7 @@
     
     <!-- Div blanche avec opacité -->
     <div class="result-box">
-        Félicitations ! Voici les détails correspondant à ton profil CSS :.
+        Félicitations ! Voici les détails correspondant à ton profil CSS :
     </div>
 
     <!-- Contenu avec image à gauche et texte à droite -->
@@ -18,6 +18,11 @@
             <img src="{{ asset('images/result1.jpg') }}" alt="Résultat 1" class="result-image">
             <p class="result-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum, risus nec tincidunt fermentum.</p>
         </div>
+    </div>
+
+    <!-- Bouton de réinitialisation -->
+    <div class="reset-container">
+        <a href="{{ route('reset') }}" class="reset-button">Rejouer le Quizz</a>
     </div>
 </div>
 @endsection

@@ -9,14 +9,10 @@ class CreateFrameworksTable extends Migration
     public function up()
     {
         Schema::create('frameworks', function (Blueprint $table) {
-            $table->id();
-            $table->uuid('uuid')->unique();
-            $table->string('nom'); // Vérifiez que cette colonne est présente
-            $table->enum('type', ['frontend', 'backend', 'fullstack']);
-            $table->enum('popularite', ['faible', 'moyenne', 'forte']);
-            $table->enum('difficulte', ['facile', 'intermediaire', 'difficile']);
-            $table->string('langage_associe');
-            $table->boolean('open_source');
+            $table->uuid('id')->primary();
+            $table->string('nom');
+            $table->string('description'); 
+            $table->longText('image');
             $table->timestamps();
         });
     }
