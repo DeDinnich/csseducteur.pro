@@ -8,9 +8,9 @@
     <h1 class="page-title">Quel CsSéducteur te correspond le mieux ?</h1>
     
     <!-- Div blanche avec texte centré -->
-    <div class="info-box">
-        Réponds honnêtement aux questions pour découvrir ton profil !
-    </div>
+    <!-- <div class="info-box">
+        <p>Réponds honnêtement aux questions pour découvrir ton profil !</p>
+    </div> -->
 
     <!-- Question actuelle -->
     <h2 class="question-title">{{ $question->texte }}</h2>
