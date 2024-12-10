@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 25vh;
+    position: relative; /* Nécessaire pour que les images se positionnent à l'intérieur de ce conteneur */
 }
 
 /* Titre */
@@ -39,4 +40,16 @@
     opacity: 1; /* Opacité à 100% */
     box-shadow: 0 6px 10px rgba(255, 255, 255, 0.8); /* Accentuation de l'ombre */
     transform: scale(1.05); /* Effet de zoom léger */
+}
+
+.home_img {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajuste la hauteur selon tes besoins */
+}
+
+.home_img img {
+    position: absolute; /* Position absolue pour contrôler la position des images */
+    width: 100px; /* Ajuste la taille de l'image si nécessaire */
+    height: auto;
 }
