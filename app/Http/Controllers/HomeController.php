@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         // Récupère tous les frameworks depuis la base de données
-        $frameworks = Framework::all();
+    $frameworks = Framework::all()->shuffle()->take(5);
 
         // Retourne la vue avec les frameworks
         return view('home', compact('frameworks'));

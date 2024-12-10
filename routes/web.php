@@ -3,10 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\QuizzController;
-
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+use App\Http\Controllers\HomeController;
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
@@ -16,3 +13,4 @@ Route::get('/results', function () {
 })->name('results');
 
 Route::get('/reset', [QuizzController::class, 'reset'])->name('reset');
+Route::get('/', [HomeController::class, 'index'])->name('home');

@@ -1,23 +1,13 @@
-/* Page container */
-.page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25vh;
-    position: relative; /* Nécessaire pour que les images se positionnent à l'intérieur de ce conteneur */
+body{
+    background-color: #040016;
 }
 
-/* Titre */
-.page-title {
-    color: white; /* Texte blanc */
-    font-size: 48px; /* Taille du texte */
-    margin-bottom: 40px; /* Espacement avec le bouton */
-    text-align: center; /* Centré */
+
+.home_text{
+    color: white;
 }
 
-/* Bouton */
-.start-button {
+.home_button{
     width: 30vw;
     height: 10vh;
     margin-top: 5vh;
@@ -27,7 +17,6 @@
     color: white; /* Texte blanc */
     font-size: 24px; /* Taille de la police */
     font-weight: bold; /* Texte en gras */
-    text-decoration: none; /* Supprime le soulignement */
     opacity: 0.9; /* Opacité à 90% */
     border: 2px solid white; /* Bordure blanche */
     border-radius: 5px; /* Coins arrondis */
@@ -35,21 +24,34 @@
     transition: all 0.3s ease; /* Transition fluide */
 }
 
-/* Hover sur le bouton */
-.start-button:hover {
+.home_button a {
+    text-decoration: none; /* Supprime le soulignement */
+}
+.home_button:hover {
     opacity: 1; /* Opacité à 100% */
     box-shadow: 0 6px 10px rgba(255, 255, 255, 0.8); /* Accentuation de l'ombre */
     transform: scale(1.05); /* Effet de zoom léger */
 }
-
-.home_img {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Ajuste la hauteur selon tes besoins */
+.home_img img {
+    position: absolute;
+    width: 80px; /* Taille des images */
+    height: auto;
 }
 
-.home_img img {
-    position: absolute; /* Position absolue pour contrôler la position des images */
-    width: 100px; /* Ajuste la taille de l'image si nécessaire */
-    height: auto;
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: relative; /* Pour que les images soient positionnées relatives à .home */
+    height: 100vh; /* Hauteur de la page */
+    width: 100%; /* Largeur de la page */
+    overflow: hidden; /* Empêche les débordements */
+}
+
+.home_text,
+.home_button {
+    position: relative; /* Les éléments sont fixes et excluent les superpositions */
+    z-index: 2; /* Assure que les images ne couvrent pas ces éléments */
 }
