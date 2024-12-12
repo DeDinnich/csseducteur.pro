@@ -4,8 +4,10 @@
     display: flex;
     justify-content: space-between; /* Place la logo à gauche et les liens à droite */
     align-items: center;
-    padding: 0px 20px; /* Ajoute un padding pour l'espace interne */
+    padding: 0px 0px; /* Ajoute un padding pour l'espace interne */
     background-color: none;
+    margin-left: 15px;
+    margin-top:15px;
 }
 
 /* Logo */
@@ -20,6 +22,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-right: 25px;
 }
 
 /* Liens */
