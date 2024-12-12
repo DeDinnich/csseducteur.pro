@@ -29,6 +29,7 @@
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Ombre blanche */
     transition: all 0.3s ease; /* Transition fluide */
     text-decoration: none;
+    cursor: pointer;
 }
 
 .home_button a {
