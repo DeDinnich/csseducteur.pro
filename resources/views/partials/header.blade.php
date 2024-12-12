@@ -1,7 +1,7 @@
 <header>
     <nav class="header">
         <a href="{{ route('home') }}" class="logo">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo">
+            <img src="{{ asset('logo.png') }}" alt="Logo">
         </a>
         <ul class="nav-links">
             <li><a href="{{ route('home') }}" class="{{ Route::currentRouteName() === 'home' ? 'active' : '' }}">Home</a></li>
