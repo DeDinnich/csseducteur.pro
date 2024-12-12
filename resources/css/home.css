@@ -10,7 +10,7 @@
 
 .home_text{
     color: white;
-    margin-top: -25vh;
+    margin-top: -5vh;
 }
 
 .home_button{
@@ -52,7 +52,7 @@
     align-items: center;
     gap: 100px;
     position: relative; /* Pour que les images soient positionnées relatives à .home */
-    height: 100vh; /* Hauteur de la page */
+    height: 80vh; /* Hauteur de la page */
     width: 100%; /* Largeur de la page */
     overflow: hidden; /* Empêche les débordements */
 }

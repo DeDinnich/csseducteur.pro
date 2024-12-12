@@ -1,3 +1,8 @@
+.page-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 Info-box .info-box {
     width: 80%;
     max-width: 600px;
