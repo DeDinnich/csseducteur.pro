@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between; /* Place la logo à gauche et les liens à droite */
     align-items: center;
-    padding: 10px 20px; /* Ajoute un padding pour l'espace interne */
+    padding: 0px 20px; /* Ajoute un padding pour l'espace interne */
     background-color: none;
 }
 

@@ -10,12 +10,13 @@
 
 .home_text{
     color: white;
+    margin-top: -25vh;
 }
 
 .home_button{
-    width: 30vw;
+    width: 25vw;
     height: 10vh;
-    margin-top: 5vh;
+    margin-top: -8vh;
     display: flex; /* Utilise flexbox */
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
@@ -27,6 +28,7 @@
     border-radius: 5px; /* Coins arrondis */
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Ombre blanche */
     transition: all 0.3s ease; /* Transition fluide */
+    text-decoration: none;
 }
 
 .home_button a {
@@ -38,8 +40,8 @@
     transform: scale(1.05); /* Effet de zoom léger */
 }
 .home_img img {
-    position: absolute;
-    width: 80px; /* Taille des images */
+    position: fixed;
+    width: 70px; /* Taille des images */
     height: auto;
 }
 
