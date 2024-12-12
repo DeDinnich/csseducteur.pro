@@ -1,14 +1,14 @@
 /* Div blanche avec opacité */
 .result-box {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto 40px auto; /* Centré avec espace en bas */
-    background-color: rgba(255, 255, 255, 0.9); /* Blanc avec opacité */
-    color: #000; /* Texte noir */
-    font-size: 18px;
-    text-align: center;
-    padding: 15px 20px; /* Espace interne */
-    border-radius: 8px; /* Coins arrondis */
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffff;
 }
 
 /* Contenu des résultats */
@@ -22,9 +22,9 @@
 /* Item de résultat */
 .result-item {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 80%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
     max-width: 800px;
 }
 
